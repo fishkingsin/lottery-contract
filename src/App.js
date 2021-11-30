@@ -17,13 +17,17 @@ const App: React.FC = () => {
     init();
   }, []);
 
+  const getRandomInt = (max) => {
+    return Math.floor(Math.random() * max);
+  };
+
   const submitForm = async (e: any) => {
     e.preventDefault();
     if (accounts != null) {
       setMessage('Waiting on transaction success...' + accounts[0]);
       await lottery.methods.mint(
         accounts[0],
-        3,
+        getRandomInt(10000),
         web3.utils.toWei(value, 'ether'),
       ).send({
         from: accounts[0],
