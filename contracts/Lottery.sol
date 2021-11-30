@@ -31,7 +31,48 @@ contract NFT1155 is ERC1155, Ownable {
         symbol = "HASHITEMS";
     }
 
+    /**
+     * Mints
+     */
     function mint(
+        address _to,
+        uint256 _id,
+        uint256 _amount
+    ) public payable {
+        // TODO: - safe id, amount, ref to BAYC contract
+        _mint(_to, _id, _amount, "");
+        /*require(saleIsActive, "Sale must be active to mint Ape");
+        require(
+            numberOfTokens <= maxApePurchase,
+            "Can only mint 20 tokens at a time"
+        );
+        require(
+            totalSupply().add(numberOfTokens) <= MAX_APES,
+            "Purchase would exceed max supply of Apes"
+        );
+        require(
+            apePrice.mul(numberOfTokens) <= msg.value,
+            "Ether value sent is not correct"
+        );
+
+        for (uint256 i = 0; i < numberOfTokens; i++) {
+            uint256 mintIndex = totalSupply();
+            if (totalSupply() < MAX_APES) {
+                safeMint(msg.sender, mintIndex);
+            }
+        }
+
+        // If we haven't set the starting index and this is either 1) the last saleable token or 2) the first token to be sold after
+        // the end of pre-sale, set the starting index block
+        if (
+            startingIndexBlock == 0 &&
+            (totalSupply() == MAX_APES || block.timestamp >= REVEAL_TIMESTAMP)
+        ) {
+            startingIndexBlock = block.number;
+        }*/
+    }
+
+    function safeMint(
         address _to,
         uint256 _id,
         uint256 _amount

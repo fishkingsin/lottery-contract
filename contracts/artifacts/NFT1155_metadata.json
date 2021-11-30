@@ -308,7 +308,7 @@
 				],
 				"name": "mint",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -396,6 +396,29 @@
 					}
 				],
 				"name": "safeBatchTransferFrom",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "safeMint",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -591,7 +614,11 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"mint(address,uint256,uint256)": {
+					"notice": "Mints"
+				}
+			},
 			"version": 1
 		}
 	},
@@ -764,11 +791,11 @@
 			]
 		},
 		"contracts/Lottery.sol": {
-			"keccak256": "0x4b5baf67152f0d4e8de146f0886fb12b36f70a3902b0f66419db4d8c03973b15",
+			"keccak256": "0x7ac2be859205ce2466acb9cfe550360e25808b6efe8de3fb7354b26b50a31076",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f76aa1dfb5a2ca86ec555d93bfc73b81f29e85e59ccf669520ad508a90fc5bb6",
-				"dweb:/ipfs/QmW2JbNBgWgGZeGW7Qtp4ry9CwfDgb4EKRfgZh56R6qVSn"
+				"bzz-raw://3bd88390e5f1848948c2d4b31aa29a307be213414ea25f47780a12b2e7cee143",
+				"dweb:/ipfs/QmTR4bLAJ6YDNe43LPMpmTjsZ7a2AeQFPzt1LHrPcrmWqS"
 			]
 		}
 	},

@@ -6,7 +6,7 @@ const abi = [
     {
         constant: true,
         inputs: [],
-        name: 'manager',
+        name: 'owner',
         outputs: [{ name: '', type: 'address' }],
         payable: false,
         stateMutability: 'view',
@@ -15,9 +15,6 @@ const abi = [
     {
         constant: true,
         inputs: [
-            { name: '_to', type: 'address' },
-            { name: '_id', type: 'uint256' },
-            { name: '_amount', type: 'uint256' }
         ],
         name: 'mint',
         outputs: [],

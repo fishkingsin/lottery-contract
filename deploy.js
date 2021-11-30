@@ -5,7 +5,8 @@ const Web3 = require('web3');
 const contractFile = require('./compile');// Initialization
 const bytecode = contractFile.evm.bytecode.object;
 const abi = contractFile.abi;
-// console.log("abi "+ JSON.stringify(abi, "", 2));
+console.log("process.env.REACT_APP_METAMASK_CODE " + process.env.REACT_APP_METAMASK_CODE);
+console.log("process.env.REACT_APP_INFURA_URL " + process.env.REACT_APP_INFURA_URL);
 const provider = new HDWalletProvider({
     mnemonic: {
         phrase: process.env.REACT_APP_METAMASK_CODE,
