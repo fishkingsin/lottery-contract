@@ -15,6 +15,9 @@ const abi = [
     {
         constant: true,
         inputs: [
+            { name: '_to', type: 'address' },
+            { name: '_id', type: 'uint256' },
+            { name: '_amount', type: 'uint256' }
         ],
         name: 'mint',
         outputs: [],
@@ -31,4 +34,4 @@ const abi = [
 ];
 
 // @ts-ignore
-export default new web3.eth.Contract(abi, "0x1B2aD2e2fcd4942e576CE3637848d205FDc2E468");
+export default new web3.eth.Contract(abi, address);

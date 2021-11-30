@@ -22,9 +22,9 @@ const App: React.FC = () => {
     if (accounts != null) {
       setMessage('Waiting on transaction success...' + accounts[0]);
       await lottery.methods.mint(
-        // accounts[0],
-        // 3,
-        // web3.utils.toWei(value, 'ether'),
+        accounts[0],
+        3,
+        web3.utils.toWei(value, 'ether'),
       ).send({
         from: accounts[0],
         amount: web3.utils.toWei(value, 'ether'),
