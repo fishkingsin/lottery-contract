@@ -31,4 +31,4 @@ const abi = [
 ];
 
 // @ts-ignore
-export default new web3.eth.Contract(abi, address);
+export default new web3.eth.Contract(abi, "0x1B2aD2e2fcd4942e576CE3637848d205FDc2E468");
