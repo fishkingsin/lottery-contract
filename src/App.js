@@ -27,11 +27,11 @@ const App: React.FC = () => {
       setMessage('Waiting on transaction success...' + accounts[0]);
       await lottery.methods.mint(
         accounts[0],
-        getRandomInt(10000),
+        1,
         web3.utils.toWei(value, 'ether'),
       ).send({
         from: accounts[0],
-        amount: web3.utils.toWei(value, 'ether'),
+        amount: 0,
       });
       setMessage('You have been entered!');
     }
